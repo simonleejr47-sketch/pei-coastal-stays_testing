@@ -3,7 +3,7 @@ CSCI 3172 — Lab 3
 
 Student: Jiaran Li
 CSID: B00997520
-Render deployment URL: https://<your-render-app-name>.onrender.com
+Render deployment URL: https://pei-coastal-stays.onrender.com
 FCS GitLab repository: https://git.cs.dal.ca/jiaran/csci-3172
 
 About this project
@@ -34,9 +34,9 @@ records return 404; unexpected server errors return 500.
 
 Sources and citations
 
-- The 8 initial stay records are based on real listings scraped in Lab 2
+- The 8 initial stay records are based on real listings in Lab 2 and Lab 1
   from the public website https://peibestvacations.com/ (owned by the
-  author); business fields such as price and rating are demo values.
+  myself); business fields such as price and rating are demo values.
 - Express.js (https://expressjs.com/) is the only runtime dependency.
 - All code is original work written for this lab.
 
@@ -45,10 +45,7 @@ Justification
 The server is split into separate files so each concern has its own home:
 the route handlers only deal with HTTP, the validation middleware only
 checks payload shape, the logger middleware only records requests, and
-the data module owns the in-memory store. This modular structure keeps the
-code easy to read and matches the separation-of-concerns requirement.
-In-memory storage is used because the lab does not require persistence:
-data resets to the 8 seed records whenever the server restarts.
+the data module owns the in-memory store. 
 
 Deployment
 
@@ -56,6 +53,5 @@ Deployment
   (or manual deploy). Build command: npm install. Start command:
   node server.js. The server reads PORT from the environment, which Render
   provides automatically.
-- GitLab: the identical source code is mirrored to the FCS GitLab server
-  under csci3172/labs/lab3 with the Instructor and TAs added as
-  Maintainers.
+  The live deployment is available at https://pei-coastal-stays.onrender.com 
+  and the API can be tested.
